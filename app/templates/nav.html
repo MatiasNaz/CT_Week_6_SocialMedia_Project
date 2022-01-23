@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#000000;">
+  <div class="container-fluid">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">Instabook</a>
+
+    <!-- Toggle button -->
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mx-auto mb-lg-0">
+
+        <!-- Link -->
+        <li style="margin-right: 3vw;" class="nav-item">
+          <a class="nav-link" href="{{ url_for('post.profile') }}">Your Profile</a>
+        </li>
+        <li  style="margin-right: 3vw;" class="nav-item">
+            <a class="nav-link" href="{{ url_for('post.add_post') }}">Create a Post</a>
+          </li>
+          <li  style="margin-right: 3vw;" class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+      </ul>
+
+      <!-- Icons -->
+      <ul class="navbar-nav d-flex flex-row me-1">
+        <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="{{ url_for('post.feedHome') }}"><i class="bi bi-house-fill"></i></a>
+          </li>
+        <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#"><i class="bi bi-chat-dots"></i></a>
+          </li>
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link" href="#"><i class="bi bi-bell"></i></a>
+        </li>
+        <li class="nav-item me-3 me-lg-0">
+          <a class="nav-link" href="#"><i class="bi bi-bookmark-heart"></i></a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->

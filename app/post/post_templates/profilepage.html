@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for post in posts %}
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <div class="card" style="width: 47vw; margin-top: 7vh;">
+          <h5 class="card-title"></h5>
+          <img class="card-img-top" src="{{ post.image }}" alt="Card image cap">
+          <div style="gap: 2vw;" class="card-body">
+            <p class="card-text">{{ post.content }}</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <i class="bi bi-heart fa-lg"></i>
+              <i style="margin-left: 1vw;" class="bi bi-chat-text-fill fa-lg"></i>
+              <i style="padding-left: 38vw;" class="bi bi-bookmark-check-fill fa-lg"></i>
+            </li>
+            <li class="list-group-item"> likes</li>
+            <li class="list-group-item">user -- comment</li>
+          </ul>
+          <div class="card-body">
+              <div class="row">
+                  <div class="col-1">
+                      <i style="padding-left: 1vw;" class="bi bi-cursor-fill fa-lg"></i>
+                  </div>
+                  <div class="col">
+                      <input id="addcomment" style="margin-left: 1vw; width: 90%;" type="text" class="form-control" placeholder="Add a comment...">
+                  </div>
+              </div>
+          </div>
+        </div>
+        
+    </div>
+    {% endfor %}
+    
+    <div style="margin-top: 7vh;" class="col">
+      
+      <div class="sidewrapper">
+          <!-- Sidebar  -->
+          <nav id="sidebar">
+              <div class="sidebar-header">
+                  <h3>{{ current_user.username }}</h3>
+              </div>
+  
+              <ul class="list-unstyled components">
+                  <p>Profile Navigation</p>
+                  <li>
+                      <a href="#">Your Profile</a>
+                  </li>
+                  <li>
+                      
+                  </li>
+                  <li>
+                      <a href="#">Notifications</a>
+                  </li>
+                  <li>
+                      <a href="#">Direct Messages</a>
+                  </li>
+                  <li>
+                      <a href="#">Favorites</a>
+                  </li>
+                  <li>
+                      <a href="#">Settings</a>
+                  </li>
+              </ul>
+  
+              
+          </nav>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
